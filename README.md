@@ -24,6 +24,16 @@ This Turborepo has some additional tools already setup for you:
 - [ESLint](https://eslint.org/) for code linting
 - [Prettier](https://prettier.io) for code formatting
 
+### Installation
+
+```
+git clone https://github.com/mantaskaveckas/nestjs-turbo
+cd nestjs-turbo
+pnpm install
+```
+
+_Hint: If you'd like to clone the repository without the git history, you can use [degit](https://github.com/Rich-Harris/degit)._
+
 ### Build
 
 To build all apps and packages, run the following command:
