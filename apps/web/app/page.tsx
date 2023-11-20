@@ -1,7 +1,10 @@
+"use client";
+
 import Image from "next/image";
 import { Card } from "@repo/ui/card";
 import { Code } from "@repo/ui/code";
 import styles from "./page.module.css";
+import { useQuery } from "@tanstack/react-query";
 
 function Gradient({
   conic,
@@ -50,13 +53,23 @@ const LINKS = [
   },
 ];
 
+async function getHello() {
+  return (await fetch("http://localhost:3001").then((res) => res.json())) as {
+    message: string;
+  };
+}
+
 export default function Page(): JSX.Element {
+  const { data } = useQuery({
+    queryKey: ["get-hello"],
+    queryFn: () => getHello(),
+  });
+
   return (
     <main className={styles.main}>
       <div className={styles.description}>
         <p>
-          examples/basic&nbsp;
-          <Code className={styles.code}>web</Code>
+          <Code className={styles.code}>{data?.message ?? "..."}</Code>
         </p>
         <div>
           <a

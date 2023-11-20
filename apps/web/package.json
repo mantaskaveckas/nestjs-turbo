@@ -9,15 +9,18 @@
     "lint": "eslint . --max-warnings 0"
   },
   "dependencies": {
+    "@repo/ui": "workspace:*",
+    "@tanstack/react-query": "^5.8.4",
+    "@tanstack/react-query-devtools": "^5.8.4",
+    "@tanstack/react-query-next-experimental": "^5.8.4",
     "next": "^14.0.2",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "@repo/ui": "workspace:*"
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
+    "@next/eslint-plugin-next": "^14.0.2",
     "@repo/eslint-config": "workspace:*",
     "@repo/typescript-config": "workspace:*",
-    "@next/eslint-plugin-next": "^14.0.2",
     "@types/eslint": "^8.44.7",
     "@types/node": "^17.0.12",
     "@types/react": "^18.0.22",
