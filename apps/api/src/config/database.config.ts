@@ -1,7 +1,5 @@
 import { MysqlConnectionOptions } from 'typeorm/driver/mysql/MysqlConnectionOptions';
 
-console.log('PROCESS', process.env);
-
 export default (): MysqlConnectionOptions => ({
   type: 'mysql',
   host: process.env.DATABASE_HOST,
